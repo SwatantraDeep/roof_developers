@@ -1,0 +1,38 @@
+:root{
+  --bg:#f7faf9;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#0f5671;
+  --accent-2:#2a9d8f;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:#1f2937; line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.site-header{background:#fff;border-bottom:1px solid #e6eef0;position:sticky;top:0;z-index:40}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#8ec5d6);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+.titles h1{margin:0;font-size:18px}
+.titles p{margin:0;color:var(--muted);font-size:13px}
+.nav a{margin-left:16px;color:var(--muted);text-decoration:none}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid rgba(0,0,0,0.04);background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7))}
+.hero-img{width:100%;height:420px;object-fit:cover;filter:contrast(0.95) saturate(0.9)}
+.hero-content{position:absolute;left:48px;top:80px;color:#042029;max-width:520px}
+.hero-content h2{font-size:32px;margin:0 0 12px}
+.hero-content p{color:var(--muted);margin:0 0 18px}
+.btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;display:inline-block}
+.cards h3{margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+.card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(15,86,113,0.06)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
+.projects-grid article{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(15,86,113,0.04)}
+.projects-grid img{width:100%;height:160px;object-fit:cover;display:block}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
+.gallery-item img{width:100%;height:140px;object-fit:cover;border-radius:8px;display:block}
+.about{margin-top:20px}
+.about-row{display:flex;gap:20px;align-items:center}
+.about-row img{width:320px;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 8px 24px rgba(15,86,113,0.06)}
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+.contact-form input,.contact-form textarea{Width:100%;padding:12px;border-radius:8px;border:1px solid #e6eef0;margin-bottom:10px}
+.site-footer{background:#042029;color:#d1e9ee;padding:18px;margin-top:30px;text-align:center}
+@media(max-width:800px){.hero-content{position:static;padding:20px;background:transparent} .about-row{flex-direction:column} .contact-grid{grid-template-columns:1fr} .nav{display:none} .hero-img{height:320px}}

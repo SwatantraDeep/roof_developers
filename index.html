@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roof Developers - Creating Roof for All Your Needs</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand"><div class="logo">RD</div><div class="titles"><h1 id="companyName">Roof Developers</h1><p id="tagline">Creating Roof for All Your Needs</p></div></div>
+      <nav class="nav"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="assets/hero.png" alt="hero" class="hero-img" />
+    <div class="hero-content container">
+      <h2 id="heroTitle">End-to-end construction & design solutions</h2>
+      <p id="heroSub">Structural design, architecture, interior, exterior, vastu & material consultancy.</p>
+      <a class="btn" href="#contact">Get a Quote</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="services" class="cards">
+      <h3>Our Services</h3>
+      <div class="grid">
+        <div class="card"><h4>Structural Design</h4><p>Safe, efficient structural engineering and load analysis.</p></div>
+        <div class="card"><h4>Architectural Design</h4><p>Concepts, drawings, and permit-ready plans.</p></div>
+        <div class="card"><h4>Interior Design</h4><p>Space planning, finishes, furniture layouts.</p></div>
+        <div class="card"><h4>Exterior Design</h4><p>Façade design, landscape coordination.</p></div>
+        <div class="card"><h4>Vastu Consultancy</h4><p>Harmonize design with vastu principles for wellbeing.</p></div>
+        <div class="card"><h4>Material Consultancy</h4><p>Sourcing, costing and material performance guidance.</p></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h3>Featured Projects</h3>
+      <div class="projects-grid">
+        <article><img src="assets/gallery/gallery1.png" alt="p1"/><h4>Residential Renovation</h4></article>
+        <article><img src="assets/gallery/gallery2.png" alt="p2"/><h4>Modern Villa</h4></article>
+        <article><img src="assets/gallery/gallery3.png" alt="p3"/><h4>Office Fitout</h4></article>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h3>Gallery</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="assets/gallery/gallery1.png" alt="g1"/></div><div class="gallery-item"><img src="assets/gallery/gallery2.png" alt="g2"/></div><div class="gallery-item"><img src="assets/gallery/gallery3.png" alt="g3"/></div><div class="gallery-item"><img src="assets/gallery/gallery4.png" alt="g4"/></div><div class="gallery-item"><img src="assets/gallery/gallery5.png" alt="g5"/></div><div class="gallery-item"><img src="assets/gallery/gallery6.png" alt="g6"/></div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h3>About Roof Developers</h3>
+      <div class="about-row">
+        <img src="assets/about.png" alt="about"/>
+        <div><p>Roof Developers is a team of architects, structural engineers and designers delivering end-to-end construction consultancy. We blend technical rigour with thoughtful design to deliver projects on time and on budget.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3>Contact Us</h3>
+      <div class="contact-grid">
+        <form action="https://formspree.io/f/FORM_REPLACE_HERE" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Your name" required/>
+          <input type="text" name="contact" placeholder="Email or phone" required/>
+          <textarea name="message" rows="5" placeholder="Project details"></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p><strong>Phone:</strong> <span id="phone">+91 99999 99999</span></p>
+          <p><strong>Email:</strong> <span id="email">hello@roofdevelopers.example</span></p>
+          <p><strong>Location:</strong> <span id="location">Mumbai, India</span></p>
+          <div class="social"><a href="#">Instagram</a> <a href="#">LinkedIn</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© <span id="year"></span> Roof Developers — Creating Roof for All Your Needs</p></div>
+  </footer>
+
+  <script>
+    // Apply config if present
+    (function(){
+      if(window.SiteConfig){ 
+        document.getElementById('companyName').textContent = window.SiteConfig.companyName || 'Roof Developers';
+        document.getElementById('tagline').textContent = window.SiteConfig.tagline || 'Creating Roof for All Your Needs';
+        document.getElementById('phone').textContent = window.SiteConfig.phone || '+91 99999 99999';
+        document.getElementById('email').textContent = window.SiteConfig.email || 'hello@roofdevelopers.example';
+        document.getElementById('location').textContent = window.SiteConfig.location || 'Mumbai, India';
+        document.getElementById('year').textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
